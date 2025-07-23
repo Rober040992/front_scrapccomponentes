@@ -1,7 +1,7 @@
-import ProductSlugPage from "./productos/[slug]/page";
-
 export default function Home() {
   return (
-    <ProductSlugPage />
+    <div className="text-white">
+      <h1>Welcome to ScraPccomponentes</h1>
+    </div>
   );
 }
