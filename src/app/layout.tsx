@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import ReactQueryProvider from "@/components/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "Scrapccomponentes",
@@ -14,11 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gray-900 min-h-screen flex flex-col">
-        <header className="bg-indigo-600 p-4">hola soy el header</header>
-        <main className="flex flex-grow ">{children}</main>
-        <footer className="bg-amber-200 text-center text-sm p-4">
-          &copy; 2025 Scrapccomponentes
-        </footer>
+        <ReactQueryProvider>
+          <header className="bg-indigo-600 p-4">hola soy el header</header>
+          <main className="flex flex-grow ">{children}</main>
+          <footer className="bg-amber-200 text-center text-sm p-4">
+            &copy; 2025 Scrapccomponentes
+          </footer>
+        </ReactQueryProvider>
       </body>
     </html>
   );
